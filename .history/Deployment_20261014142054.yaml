@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-app-deployment
+  labels:
+    app: my-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: my-app
+  template:
+    metadata:
+      labels:
+        app: my-app
+    spec:
+      containers:
+      - name: case-management-app
+        image: luvuyotafeni012/case-management-app:38c3cf63e87010f8502318fd395dd4049f0bc094
+        
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
+        env:
+        - name: 
