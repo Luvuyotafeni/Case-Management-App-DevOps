@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: db-deployment
+  namespace: case-management
 spec:
   replicas: 1
   selector:

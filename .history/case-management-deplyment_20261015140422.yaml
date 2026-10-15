@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: case-management-deployment
+  labels:
+    app: my-app
+spec:
+  replicas: 5
+
+  selector:
+    matchLabels:
+      app: my-app
+
+  template:
+    metadata:
+      labels:
+        app: my-app
+
+    spec:
+      containers:
+        - name: case-management-app
+          image: luvuyotafeni012/case-management-app:4deba1f2d8625fb798eab464617ba5658ec1abdc
+          imagePullPolicy: Always
+
+          ports:
+            - containerPort: 8080
+
+          envFrom:
+            - configMapRef:
+                name: case-management-config
+
+            - secretRef:
+                name: case-management-secret
