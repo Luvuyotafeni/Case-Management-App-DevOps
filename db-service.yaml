@@ -8,6 +8,7 @@ metadata:
 spec:
   selector:
     app: my-app
+    tier: database
   ports:
     - protocol: TCP
       port: 3306
