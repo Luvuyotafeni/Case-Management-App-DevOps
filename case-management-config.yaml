@@ -5,7 +5,7 @@ metadata:
 data:
   SPRING_APPLICATION_NAME: "CaseManagement"
 
-  DB_HOST: "mysql"
+  DB_HOST: "db-service"
   DB_PORT: "3306"
   DB_NAME: "casemanagement"
 
