@@ -5,26 +5,20 @@ metadata:
 data:
   SPRING_APPLICATION_NAME: "CaseManagement"
 
-  # Database
   DB_HOST: "mysql"
   DB_PORT: "3306"
   DB_NAME: "casemanagement"
 
-  # JPA / Hibernate
   HIBERNATE_DIALECT: "org.hibernate.dialect.MySQLDialect"
   HIBERNATE_DDL_AUTO: "update"
 
-  # JWT
   JWT_EXPIRATION: "432000"
 
-  # ImageKit
   IMAGEKIT_URL_ENDPOINT: "https://ik.imagekit.io/od4sntfndg"
 
-  # Multipart
   MULTIPART_MAX_FILE_SIZE: "10MB"
   MULTIPART_MAX_REQUEST_SIZE: "10MB"
 
-  # Mail
   MAIL_HOST: "smtp.gmail.com"
   MAIL_PORT: "587"
   MAIL_SMTP_AUTH: "true"

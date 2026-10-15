@@ -1,0 +1,13 @@
+- name: Create Kubernetes Secret
+  run: |
+    kubectl create secret generic case-management-secret \
+      --namespace case-management \
+      --from-literal=DB_USERNAME="${{ secrets.DB_USERNAME }}" \
+      --from-literal=DB_PASSWORD="${{ secrets.DB_PASSWORD }}" \
+      --from-literal=JWT_SECRET="${{ secrets.JWT_SECRET }}" \
+      --from-literal=IMAGEKIT_PUBLIC_KEY="${{ secrets.IMAGEKIT_PUBLIC_KEY }}" \
+      --from-literal=IMAGEKIT_PRIVATE_KEY="${{ secrets.IMAGEKIT_PRIVATE_KEY }}" \
+      --from-literal=MAIL_USERNAME="${{ secrets.MAIL_USERNAME }}" \
+      --from-literal=MAIL_PASSWORD="${{ secrets.MAIL_PASSWORD }}" \
+      --dry-run=client \
+      -o yaml | kubectl apply -f -
