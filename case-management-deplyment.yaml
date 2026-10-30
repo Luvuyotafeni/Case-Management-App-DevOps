@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
         - name: case-management-app
-          image: luvuyotafeni012/case-management-app:9973688e19646c91b4e9d4f7e19f5f2244f3d70d
+          image: luvuyotafeni012/case-management-app:e03230781dfe3c7e181f631cae2fb9a161b8ccce
           imagePullPolicy: Always
 
           ports:
